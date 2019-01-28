@@ -10,7 +10,7 @@ import 'package:angular/angular.dart';
     templateUrl: 'd_navbar.html')
 class NavbarComponent implements AfterViewInit {
   NavbarComponent(this.host) {
-    _parentElement = host.parent;
+    _parentElement = document.body;
     _parentElement.onScroll.listen((event) {
       if (alwaysShow)
         offset = 0;
@@ -22,10 +22,7 @@ class NavbarComponent implements AfterViewInit {
     });
   }
 
-  void ngAfterViewInit() {
-    /**
-     * Make sure nav doesn't overflow container scrollbar
-     */
+  void ngAfterViewInit() {    
     final navContainer = host.querySelector('#navContainer');
     navContainer.style.width = '${_parentElement.clientWidth}px';
     window.onResize.listen((_) {
