@@ -12,6 +12,7 @@ class NavbarComponent implements AfterViewInit {
   NavbarComponent(this.host) {
     _parentElement = document.documentElement;
     _parentElement.onScroll.listen((event) {
+      print('scrolling, alwaysShow: $alwaysShow');
       if (alwaysShow)
         offset = 0;
       else {
