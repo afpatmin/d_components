@@ -11,8 +11,7 @@ import 'package:angular/angular.dart';
 class NavbarComponent implements AfterViewInit {
   NavbarComponent(this.host) {
     _parentElement = document.documentElement;
-    _parentElement.onScroll.listen((event) {
-      print('scrolling, alwaysShow: $alwaysShow');
+    document.onScroll.listen((event) {      
       if (alwaysShow)
         offset = 0;
       else {
