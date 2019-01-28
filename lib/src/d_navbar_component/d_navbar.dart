@@ -15,6 +15,9 @@ class NavbarComponent implements AfterViewInit {
       if (alwaysShow)
         offset = 0;
       else {
+        print('parentElement.scrollTop: ${_parentElement.scrollTop}');
+        print('window scrollY: ${window.scrollY}');
+        
         final deltaScrollY = _parentElement.scrollTop - _previousScrollY;
         offset = _clamp(offset + deltaScrollY, 0, height);
         _previousScrollY = _parentElement.scrollTop;
