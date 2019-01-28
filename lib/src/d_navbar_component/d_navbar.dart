@@ -10,7 +10,7 @@ import 'package:angular/angular.dart';
     templateUrl: 'd_navbar.html')
 class NavbarComponent implements AfterViewInit {
   NavbarComponent(this.host) {
-    _parentElement = document.body;
+    _parentElement = document.documentElement;
     _parentElement.onScroll.listen((event) {
       if (alwaysShow)
         offset = 0;
