@@ -41,9 +41,7 @@ class ColorPickerComponent implements OnDestroy {
   // ignore: avoid_setters_without_getters
   set colorExternal(String value) {
     _color = value;
-  }
-
-  String get colorExternal => _color;
+  }  
 
   @Output('valueChange')
   Stream<String> get colorOutput => _valueStreamController.stream;
