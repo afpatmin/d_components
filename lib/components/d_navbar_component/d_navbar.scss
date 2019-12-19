@@ -1,43 +1,37 @@
-:host > div#navContainer
-{
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    transition: box-shadow 0.4s;
-    -webkit-transition: -webkit-box-shadow 0.4s;
-    -moz-transition: -moz-box-shadow 0.4s;
-    -o-transition: box-shadow 0.4s;
-    -webkit-box-shadow: 0;
-    -moz-box-shadow: 0;
-    box-shadow: 0;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100vw;
+:host > div#navContainer {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: box-shadow 0.4s;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  -moz-transition: -moz-box-shadow 0.4s;
+  -o-transition: box-shadow 0.4s;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+  width: 100%;
+  max-width: 100vw;
 
-    ::ng-deep
-    {
-        ul
-        {
-            list-style-type: none;
-            display: inline;
-            li
-            {
-                display: inline;
-            }
-        }
+  ::ng-deep {
+    ul {
+      list-style-type: none;
+      display: inline;
+      li {
+        display: inline;
+      }
     }
+  }
 }
 
-:host > div.follow
-{
-    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+:host > div.follow {
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
