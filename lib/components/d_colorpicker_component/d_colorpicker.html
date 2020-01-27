@@ -1,6 +1,12 @@
-<label [attr.for]="id" style.background-color="{{color}}">
-    <input class="colorInput" [id]="id" type="color" [(ngModel)]="color"/>
+<label [attr.for]="id"
+       style.background-color="{{color}}">
+    <input class="colorInput"
+           [id]="id"
+           type="color"
+           [(ngModel)]="color" />
 </label>
 <form [ngFormModel]="form">
-    <material-input ngControl="color" [(ngModel)]="color"></material-input>
+    <fo-text-input-input ngControl="color"
+                         noFocusShadow
+                         [(ngModel)]="color"></fo-text-input-input>
 </form>

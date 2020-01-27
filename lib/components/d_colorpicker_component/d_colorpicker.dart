@@ -3,13 +3,13 @@
 import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
-import 'package:angular_components/angular_components.dart';
+import 'package:fo_components/components/fo_text_input/fo_text_input_component.dart';
 
 @Component(
     selector: 'd-colorpicker',
     styleUrls: ['d_colorpicker.css'],
     templateUrl: 'd_colorpicker.html',
-    directives: [materialInputDirectives, formDirectives],
+    directives: [FoTextInputComponent, formDirectives],
     changeDetection: ChangeDetectionStrategy.OnPush)
 class ColorPickerComponent implements OnDestroy {
   ColorPickerComponent() : instanceNo = _instanceCounter {
@@ -41,7 +41,7 @@ class ColorPickerComponent implements OnDestroy {
   // ignore: avoid_setters_without_getters
   set colorExternal(String value) {
     _color = value;
-  }  
+  }
 
   @Output('valueChange')
   Stream<String> get colorOutput => _valueStreamController.stream;
