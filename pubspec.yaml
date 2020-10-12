@@ -1,14 +1,15 @@
 name: d_components
-authors: [Dejan Marlovic <dmarlovic83@gmail.com>] 
+authors: [ Dejan Marlovic <dmarlovic83@gmail.com> ]
 homepage: https://github.com/dejan-marlovic/d_components
-description: A collection of generic angular components that I found useful and could not find among material components.
+description: A collection of generic angular components that I found useful and
+  could not find among material components.
 version: 0.2.1
 environment:
   sdk: '>=2.0.0 <3.0.0'
 dependencies:
-  angular: ^6.0.0-alpha
-  angular_components: ^0.14.0-alpha  
-  angular_forms: ^2.1.3
-  intl: ^0.15.8
+  angular: ^6.0.0
+  angular_components: ^1.0.1
+  angular_forms: ^3.0.0
+  fo_components: ^2.0.0
+  intl: ^0.16.1
   sass_builder: ^2.1.3
-  fo_components: ^1.7.5+6
