@@ -6,11 +6,11 @@ import 'package:angular_forms/angular_forms.dart';
 import 'package:fo_components/components/fo_text_input/fo_text_input_component.dart';
 
 @Component(
-    selector: 'd-colorpicker',
-    styleUrls: ['d_colorpicker.css'],
-    templateUrl: 'd_colorpicker.html',
-    directives: [FoTextInputComponent, formDirectives],
-    changeDetection: ChangeDetectionStrategy.OnPush)
+  selector: 'd-colorpicker',
+  styleUrls: ['d_colorpicker.css'],
+  templateUrl: 'd_colorpicker.html',
+  directives: [FoTextInputComponent, formDirectives],
+)
 class ColorPickerComponent implements OnDestroy {
   ColorPickerComponent() : instanceNo = _instanceCounter {
     _instanceCounter++;
