@@ -2,6 +2,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 import 'dart:html';
 import 'dart:math';
+
 import 'package:angular/angular.dart';
 
 @Component(
@@ -11,32 +12,9 @@ import 'package:angular/angular.dart';
 class NavbarComponent implements OnInit {
   NavbarComponent(this.host);
 
-  @override
-  void ngOnInit() {
-    _parentElement = trackDocument ? document.documentElement : host.parent;
-    final s = trackDocument ? window : host.parent;
-    if (s != null) {
-      s.onScroll.listen((event) {
-        if (alwaysShow) {
-          offset = 0;
-        } else {
-          final deltaScrollY = _parentElement.scrollTop - _previousScrollY;
-          offset = _clamp(offset + deltaScrollY, 0, height);
-          _previousScrollY = _parentElement.scrollTop;
-        }
-      });
-    }
-  }
-
-  int _clamp(int value, int minimum, int maximum) =>
-      max(minimum, min(maximum, value));
-
-  bool get isTop =>
-      (_parentElement == null) ? true : _parentElement.scrollTop == 0;
   int offset = 0;
   int _previousScrollY = 0;
-
-  Element _parentElement;
+  Element? _parentElement;
   final Element host;
 
   @Input()
@@ -50,4 +28,27 @@ class NavbarComponent implements OnInit {
 
   @Input()
   bool trackDocument = false;
+
+  bool get isTop =>
+      (_parentElement == null) ? true : _parentElement?.scrollTop == 0;
+
+  @override
+  void ngOnInit() {
+    _parentElement = trackDocument ? document.documentElement : host.parent;
+    final s = trackDocument ? window : host.parent;
+    if (s != null) {
+      s.onScroll.listen((event) {
+        if (alwaysShow) {
+          offset = 0;
+        } else if (_parentElement != null) {
+          final deltaScrollY = _parentElement!.scrollTop - _previousScrollY;
+          offset = _clamp(offset + deltaScrollY, 0, height);
+          _previousScrollY = _parentElement!.scrollTop;
+        }
+      });
+    }
+  }
+
+  int _clamp(int value, int minimum, int maximum) =>
+      max(minimum, min(maximum, value));
 }

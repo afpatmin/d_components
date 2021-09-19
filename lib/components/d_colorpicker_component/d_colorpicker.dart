@@ -50,7 +50,7 @@ class ColorPickerComponent implements OnDestroy {
   static int _instanceCounter = 0;
 }
 
-Map<String, String> cssColor(AbstractControl control) {
+Map<String, String>? cssColor(AbstractControl control) {
   final pattern = RegExp(r'(^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$)');
   final result = pattern.stringMatch(control.value);
 

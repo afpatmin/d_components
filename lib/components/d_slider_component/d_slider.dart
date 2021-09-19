@@ -10,11 +10,11 @@ import 'package:angular_forms/angular_forms.dart';
     directives: [coreDirectives, NgModel])
 class SliderComponent {
   @Input()
-  String value;
+  String? value;
   @Input()
-  String max;
+  String max = '100';
   @Input()
-  String min;
+  String min = '0';
   @Input()
-  String step;
+  String step = '1';
 }
