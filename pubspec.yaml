@@ -5,14 +5,10 @@ description: A collection of generic angular components that I found useful and
 version: 0.2.1
 publish_to: none
 environment:
-  sdk: '>=2.14.0 <3.0.0'
+  sdk: ">=2.14.0 <3.0.0"
 dependencies:
-  angular: ^7.0.0
-  #angular_components: ^1.0.1
-  angular_forms: ^4.0.0
-  fo_components: 
-    git: 
-      url: https://github.com/afpatmin/fo_components.git
-      ref: null-safety
+  angular: ^7.0.2
+  angular_forms: ^4.0.1
+  fo_components: ^3.0.1+1
   intl: ^0.17.0
   sass_builder: ^2.1.4
