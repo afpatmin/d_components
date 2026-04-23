@@ -12,7 +12,9 @@ dependencies:
   angular_components: ^1.0.1
   angular_forms: ^3.0.0
   fo_components: 
-    git: https://github.com/afpatmin/fo_components.git
+    git: 
+      url: https://github.com/afpatmin/fo_components.git
+      ref: dc08cc1
   intl: ^0.17.0
   sass_builder: ^2.1.3
 
